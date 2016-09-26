@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Challenge 1</title>
+    </head>
+    
+    <body>
+        <form id="form1">
+          First name: <input type="text" name="fname"><br>
+          Age: <input type="text" name="lname"><br>
+          User Name: <input type="text" name="userName">
+        </form>
+        <p>Click "submit" to display the value of each element in the form.</p>
+        <button onclick="myResponse()">Submit</button>
+        <p id="demo"></p>
+        <script>
+            function myResponse() {
+                var formArray = document.getElementById("form1");
+                var name = formArray.elements[0].value;
+                var age = formArray.elements[1].value;
+                var userName = formArray.elements[2].value
+                var responseArray = "Your name is " + name + ", you are " + age + " year old and your username is " + userName;
+                document.getElementById("demo").innerHTML = responseArray;
+            }
+        </script>
+    </body>
+</html>
