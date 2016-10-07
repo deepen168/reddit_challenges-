@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Challenge 2</title>
+    </head>
+    <body>
+        <form id="calculator">
+            <input type="text" name="firstInput">
+            <input type="text" name="operatorInput">
+            <input type="text" name="secondInput">
+        </form>
+        <button onclick="myResopnse()">equals</button>
+        <p id="response"></p>
+        <script>
+            function myResopnse(){
+                var firstInput = parseInt(document.getElementById("calculator").elements[0].value);
+                var secondInput = parseInt(document.getElementById("calculator").elements[2].value);
+                var outputOperator = document.getElementById("calculator").elements[1].value;
+                var output; 
+                if(outputOperator === "/"){
+                    output = firstInput / secondInput;
+                } else if(outputOperator === "*"){
+                    output = firstInput * secondInput;
+                } else if(outputOperator === "+"){
+                    output = firstInput + secondInput;
+                } else if(outputOperator === "-"){
+                    output = firstInput - secondInput;
+                } else{
+                    output = "invalid operator";
+                }
+                document.getElementById("response").innerHTML = output;
+            }
+        </script>
+    </body>
+</html>
